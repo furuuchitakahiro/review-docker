@@ -53,4 +53,4 @@ review-textmaker:
 	$(DOCKER_CMD) sh -c "cd $(DOC) && review-textmaker $(REVIEW_CONFIG_FILE)"
 
 review-compile:
-	$(DOCKER_CMD) sh -c "review-compile --target $(FMT) $(REVIEW_FILE) > $(OUTPUT_FILE_PATH)"
+	$(DOCKER_CMD) sh -c "cd $(DOC) && review-compile --target $(FMT) --yaml $(REVIEW_CONFIG_FILE)"
